@@ -1,59 +1,78 @@
 <body class="bg-light">
 
 <div class="container">
+
+  <div class="top-product-list-block">
+    <h3>Перечень возможных продуктов</h3>
+    <ul class="list-group list-group-horizontal-sm">
+      <li class="list-group-item">Индейка</li>
+      <li class="list-group-item">Тыква</li>
+      <li class="list-group-item">Оливковое масло</li>
+    </ul>
+    <ul class="list-group list-group-horizontal-md">
+      <li class="list-group-item">Харисса или аджика Kitchen Ceremony</li>
+      <li class="list-group-item">Можжевеловая соль Kitchen Ceremony</li>
+      <li class="list-group-item">Зерна граната</li>
+    </ul>
+    <ul class="list-group list-group-horizontal-lg">
+      <li class="list-group-item">Руккола или шпинат</li>
+      <li class="list-group-item">Сладкие яблоки</li>
+      <li class="list-group-item">Фета</li>
+    </ul>
+    <ul class="list-group list-group-horizontal-xl">
+      <li class="list-group-item">Aвокадо</li>
+      <li class="list-group-item">Прошуто</li>
+      <li class="list-group-item">Ореховая дукка c сушеной клюквой Kitchen Ceremony</li>
+    </ul>
+    <ul class="list-group list-group-horizontal-xxl">
+      <li class="list-group-item">Курица</li>
+      <li class="list-group-item">Помидор</li>
+      <li class="list-group-item">Болгарский перец</li>
+    </ul>
+    <ul class="list-group list-group-horizontal-xxl">
+      <li class="list-group-item">Лук шалот</li>
+      <li class="list-group-item">Чеснок</li>
+      <li class="list-group-item">Сванская соль Kitchen Ceremony Зеленая Аджика Kitchen Ceremony</li>
+    </ul>
+  </div>
+
   <main>
     <div class="py-5 text-center">
-      <h2>Форма оформления заказа</h2>
-      <p class="lead">Ниже приведен пример формы, полностью созданной с использованием элементов управления формы Bootstrap. Каждая требуемая группа форм имеет состояние проверки, которое может быть вызвано попыткой отправить форму без ее заполнения.</p>
+      <h2>Ваша корзина продуктов</h2>
+      <p class="lead">Вы можете выбрать необходимые вам продукты и оформить заказ. Спасибо за выбор нашего сервиса.</p>
     </div>
 
     <div class="row g-5">
       <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Ваша корзина</span>
-          <span class="badge bg-primary rounded-pill">3</span>
+          <span class="text-primary">Перечень продуктов</span>
         </h4>
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
               <h6 class="my-0">Наименование продукта</h6>
-              <small class="text-muted">Краткое описание</small>
             </div>
             <span class="text-muted">1200₽</span>
           </li>
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
               <h6 class="my-0">Второй продукт</h6>
-              <small class="text-muted">Краткое описание</small>
             </div>
             <span class="text-muted">800₽</span>
           </li>
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
               <h6 class="my-0">Третий элемент</h6>
-              <small class="text-muted">Краткое описание</small>
             </div>
             <span class="text-muted">500₽</span>
           </li>
-          <li class="list-group-item d-flex justify-content-between bg-light">
-            <div class="text-success">
-              <h6 class="my-0">Промо-код</h6>
-              <small>ПРИМЕРКОДА</small>
-            </div>
-            <span class="text-success">−500₽</span>
-          </li>
           <li class="list-group-item d-flex justify-content-between">
-            <span>Всего (РУБ)</span>
+            <span>Всего:</span>
             <strong>2000₽</strong>
           </li>
         </ul>
 
-        <form class="card p-2">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Промо-код">
-            <button type="submit" class="btn btn-secondary">Выкупить</button>
-          </div>
-        </form>
+
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Адрес для выставления счета</h4>
@@ -76,17 +95,6 @@
             </div>
 
             <div class="col-12">
-              <label for="username" class="form-label">Имя пользователя</label>
-              <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="username" placeholder="Имя пользователя" required="">
-                <div class="invalid-feedback">
-                  Имя пользователя обязательно.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12">
               <label for="email" class="form-label">Эл. адрес <span class="text-muted">(Необязательно)</span></label>
               <input type="email" class="form-control" id="email" placeholder="you@example.com">
               <div class="invalid-feedback">
@@ -96,54 +104,14 @@
 
             <div class="col-12">
               <label for="address" class="form-label">Адрес</label>
-              <input type="text" class="form-control" id="address" placeholder="ул. Фокина" required="">
+              <input type="text" class="form-control" id="address" placeholder="Введите адрес" required="">
               <div class="invalid-feedback">
                 Пожалуйста, введите свой адрес доставки.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="address2" class="form-label">Адрес 2 <span class="text-muted">(Необязательно)</span></label>
-              <input type="text" class="form-control" id="address2" placeholder="квартира или дом">
-            </div>
-
-            <div class="col-md-5">
-              <label for="country" class="form-label">Страна</label>
-              <select class="form-select" id="country" required="">
-                <option value="">Выберите...</option>
-                <option>Россия</option>
-              </select>
-              <div class="invalid-feedback">
-                Пожалуйста, выберите действующую страну.
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <label for="state" class="form-label">Область</label>
-              <select class="form-select" id="state" required="">
-                <option value="">Выберите...</option>
-                <option>Брянская</option>
-              </select>
-              <div class="invalid-feedback">
-                Пожалуйста, выберите действующую область.
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="zip" class="form-label">Индекс</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required="">
-              <div class="invalid-feedback">
-                Почтовый индекс обязателен.
               </div>
             </div>
           </div>
 
           <hr class="my-4">
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="same-address">
-            <label class="form-check-label" for="same-address">Адрес доставки такой же, как мой платежный адрес</label>
-          </div>
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="save-info">
@@ -206,7 +174,7 @@
 
           <hr class="my-4">
 
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Продолжить оформление заказа</button>
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Оформить заказ</button>
         </form>
       </div>
     </div>
@@ -215,3 +183,5 @@
 </div>
 
 </body>
+
+<hr>

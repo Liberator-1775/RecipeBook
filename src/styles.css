@@ -41,3 +41,24 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+/*Product list*/
+
+.top-product-list-block{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0 10px 0;
+}
+
+.list-group-item{
+  cursor: pointer;
+}
+
+.list-group-item:hover{
+  background-color: darkblue;
+  color: white;
+}
