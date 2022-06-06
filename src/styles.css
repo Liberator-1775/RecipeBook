@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+
+/*Header*/
+
+.menu-items{
+  color: white;
+  padding: 5px;
+}
+
+.menu-items:visited{
+  color: white;
+}
+
+.menu-items:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.header-color {
+  background-color: #bec9ed;
+}
+
+.logo-img {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-items: center;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+/*Main-page*/
+.top-main-block{
+  padding: 40px;
+}
+
+/*Img bloc style*/
+
+.bloc-img {
+  background-image: url("assets/images/c3e09aec0de685e7e90f08a6e9eec12d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
