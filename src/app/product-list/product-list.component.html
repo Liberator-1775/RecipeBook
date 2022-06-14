@@ -4,36 +4,11 @@
 
   <div class="top-product-list-block">
     <h3>Перечень возможных продуктов</h3>
-    <ul class="list-group list-group-horizontal-sm">
-      <li class="list-group-item">Индейка</li>
-      <li class="list-group-item">Тыква</li>
-      <li class="list-group-item">Оливковое масло</li>
-    </ul>
-    <ul class="list-group list-group-horizontal-md">
-      <li class="list-group-item">Харисса или аджика Kitchen Ceremony</li>
-      <li class="list-group-item">Можжевеловая соль Kitchen Ceremony</li>
-      <li class="list-group-item">Зерна граната</li>
-    </ul>
-    <ul class="list-group list-group-horizontal-lg">
-      <li class="list-group-item">Руккола или шпинат</li>
-      <li class="list-group-item">Сладкие яблоки</li>
-      <li class="list-group-item">Фета</li>
-    </ul>
-    <ul class="list-group list-group-horizontal-xl">
-      <li class="list-group-item">Aвокадо</li>
-      <li class="list-group-item">Прошуто</li>
-      <li class="list-group-item">Ореховая дукка c сушеной клюквой Kitchen Ceremony</li>
-    </ul>
-    <ul class="list-group list-group-horizontal-xxl">
-      <li class="list-group-item">Курица</li>
-      <li class="list-group-item">Помидор</li>
-      <li class="list-group-item">Болгарский перец</li>
-    </ul>
-    <ul class="list-group list-group-horizontal-xxl">
-      <li class="list-group-item">Лук шалот</li>
-      <li class="list-group-item">Чеснок</li>
-      <li class="list-group-item">Сванская соль Kitchen Ceremony Зеленая Аджика Kitchen Ceremony</li>
-    </ul>
+      <ul class="list-group list-group-horizontal-sm">
+        <li class="list-group-item" *ngFor="let item of productListInfo">
+        <span (click)="getProduct(item)">{{item.name}}</span>
+        </li>
+      </ul>
   </div>
 
   <main>
@@ -52,20 +27,16 @@
             <div>
               <h6 class="my-0">Наименование продукта</h6>
             </div>
-            <span class="text-muted">1200₽</span>
+            <span class="text-muted">₽</span>
           </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
+          <ng-container *ngFor="let item of result">
+          <li class="list-group-item d-flex justify-content-between lh-sm" >
             <div>
-              <h6 class="my-0">Второй продукт</h6>
+              <h6 class="my-0">{{item}}</h6>
             </div>
-            <span class="text-muted">800₽</span>
+              <span class="text-muted">{{getProductPrice(item)}}</span>
           </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Третий элемент</h6>
-            </div>
-            <span class="text-muted">500₽</span>
-          </li>
+          </ng-container>
           <li class="list-group-item d-flex justify-content-between">
             <span>Всего:</span>
             <strong>2000₽</strong>

@@ -6,6 +6,7 @@ import {HeaderComponent} from "./shared/layout/header/header.component";
 import {FooterComponent} from "./shared/layout/footer/footer.component";
 import {AppRoutingModule} from "./app-routing.module";
 import {AlertModule} from "ngx-bootstrap/alert";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {AlertModule} from "ngx-bootstrap/alert";
   ],
 
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     AlertModule.forRoot()
